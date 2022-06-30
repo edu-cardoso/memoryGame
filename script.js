@@ -1,4 +1,4 @@
-const inicio = performance.now();
+const inicio = performance.now()
 
 const cardsContainer = document.querySelector('.cards-container')
 
@@ -26,16 +26,17 @@ const verificaFimJogo = () => {
   let cartaVirada = document.querySelectorAll('.carta-virada')
 
   if (cartaVirada.length == 16) {
-    const fim = performance.now() / 1000;
+    const fim = performance.now() / 1000
     setTimeout(() => {
       alert('Parabéns!')
       let timer = document.querySelector('.timer')
-      timer.innerText = `${localStorage.getItem('player')}: ${fim.toFixed(2)} segundos` 
+      timer.innerText = `${localStorage.getItem('player')}: ${fim.toFixed(
+        2
+      )} segundos`
       let gameOver = document.querySelector('.gameOver')
       gameOver.style.display = 'flex'
     }, 2000)
   }
-  
 }
 
 const checarCarta = () => {
@@ -82,11 +83,11 @@ const criarCard = personagens => {
   let front = criarElemento('div', 'face front')
   let back = criarElemento('div', 'face back')
 
-  front.style.backgroundImage = `url('/imagens/${personagens}.jpg')`
+  front.style.backgroundImage = `url('imagens/${personagens}.jpg')`
 
   setTimeout(() => {
     cards.addEventListener('click', revelarCarta)
-    back.style.backgroundImage = `url('/imagens/back.jpg')`
+    back.style.backgroundImage = `url('imagens/back.jpg')`
   }, 3000)
 
   cards.appendChild(front)
@@ -95,7 +96,7 @@ const criarCard = personagens => {
   cards.setAttribute('data-personagem', personagens)
 
   cardsContainer.appendChild(cards)
-  
+
   return cards
 }
 
@@ -118,7 +119,4 @@ const reiniciar = () => {
   carregarJogo()
   let gameOver = document.querySelector('.gameOver')
   gameOver.style.display = 'none'
-
 }
-
-
