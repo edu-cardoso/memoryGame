@@ -114,7 +114,7 @@ const carregarJogo = () => {
 carregarJogo()
 
 const reiniciar = () => {
-  window.location = 'menu.html'
+  window.location = 'index.html'
   cardsContainer.innerHTML = ''
   carregarJogo()
   let gameOver = document.querySelector('.gameOver')
