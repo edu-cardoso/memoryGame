@@ -81,3 +81,33 @@ body {
   border: none;
 
 }
+
+
+@media (max-width:600px) {
+
+  #tabuleiro {
+    width: 90%;
+    margin: 8rem auto;
+  }
+  .cards {
+    aspect-ratio: 3/4;
+  }
+
+  .gameOver {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .timer {
+    margin: 1rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reiniciar {
+   width: 100%;
+   justify-content: center;
+  
+  }
+}
